@@ -1,0 +1,13 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ilja/01_diss_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/home/ilja/01_diss_ws/src/04_path_tracking/pathtracking_all/src"
+    ],
+
+	"[python]": {
+	  "editor.insertSpaces": true,
+	  "editor.tabSize": 4  
+	}
+
+}
