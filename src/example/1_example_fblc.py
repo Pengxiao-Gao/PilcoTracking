@@ -123,23 +123,23 @@ if __name__ == "__main__":
 
 
 
-    with plt.style.context('science'):
+    # with plt.style.context('science'):
 
-        fig2, ax = plt.subplots(nrows=2, ncols=2)
-        fig2.canvas.set_window_title("Analysis")
-        ax[0,0].plot(ackermann_model.saveSteer.save_steer0, color='y' )
-        ax[0,0].plot(ackermann_model.saveSteer.save_steer1, color='b', LineStyle='--')
-        ax[0,1].plot( np.rad2deg(feedforward.steer) )
-        
-        ax[1,1].plot(opath[0], opath[1], marker='.')
-        ax[1,1].plot(dpath[0], dpath[1])
+    fig2, ax = plt.subplots(nrows=2, ncols=2)
+    fig2.canvas.set_window_title("Analysis")
+    ax[0,0].plot(ackermann_model.saveSteer.save_steer0, color='y' )
+    ax[0,0].plot(ackermann_model.saveSteer.save_steer1, color='b', LineStyle='--')
+    ax[0,1].plot( np.rad2deg(feedforward.steer) )
+    
+    ax[1,1].plot(opath[0], opath[1], marker='.')
+    ax[1,1].plot(dpath[0], dpath[1])
 
-        
+    
 
-        print("AS:", des_arclength.shape, opath[0].shape)
-        ax[1,0].plot(des_arclength[0:-1], lateral_error)
+    print("AS:", des_arclength.shape, opath[0].shape)
+    ax[1,0].plot(des_arclength[0:-1], lateral_error)
 
-        plt.show()
+    plt.show()
     with plt.style.context(['science', 'ieee']):
         plt.plot( np.rad2deg(feedforward.steer) )
         plt.xlabel('Anzahl der Schritte')

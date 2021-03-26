@@ -33,8 +33,6 @@ from pathplanning.path_sineShaped import Path_Sine
 import numpy as np
 
 import tensorflow as tf
-from tensorflow import logging
-tf.logging.set_verbosity(tf.logging.ERROR)
 
 
 
@@ -103,20 +101,19 @@ if __name__ == "__main__":
 
 
 
-    with tf.Session() as sess:
 
-        state_dim = 4
-        control_dim =1
-        max_yerror = 0.5
+    state_dim = 4
+    control_dim =1
+    max_yerror = 0.5
 
-        data_mean,data_std = pilcotrac.get_randomState()
-        W = np.diag([1e-1,1e-1,1e-3,1e-4])
-        T_sim = 600
+    data_mean,data_std = pilcotrac.get_randomState()
+    W = np.diag([1e-1,1e-1,1e-3,1e-4])
+    T_sim = 600
 
-        R, controller = pilcotrac.get_RewardFun_and_Controller(state_dim,control_dim,data_mean,data_std,max_yerror,W)
-        
-        pilco = pilcotrac.loadpilco(controller=controller,reward=R,sparse=True)
-        X_new, Y_new ,j = pilcotrac.rollout(pilco,max_yerror,data_mean,data_std,lookahead= 1.22,timesteps=T_sim,random=False, verbose=False)
+    R, controller = pilcotrac.get_RewardFun_and_Controller(state_dim,control_dim,data_mean,data_std,max_yerror,W)
+    
+    pilco = pilcotrac.loadpilco(controller=controller,reward=R,sparse=True)
+    X_new, Y_new ,j = pilcotrac.rollout(pilco,max_yerror,data_mean,data_std,lookahead= 1.22,timesteps=T_sim,random=False, verbose=False)
 
     # print("Max steer = ", np.fabs( np.rad2deg(max(steerff_saver)) ) )
 
