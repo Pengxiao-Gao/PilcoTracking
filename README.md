@@ -10,13 +10,13 @@ This project utilizes model-based reinforcement learning [PILCO](https://github.
 
 Feed-forward control and PILCO Feed-back control
 
-![](https://github.com/StefanGao1114/PilcoTracking/blob/master/src/figs/pilcokreis.png Control system)
+![](https://github.com/StefanGao1114/PilcoTracking/blob/master/src/figs/pilcokreis.png)
 ****
 
 
 ## Visualisation
 
 
-![](https://github.com/StefanGao1114/PilcoTracking/blob/master/src/figs/Visualisation.gif Visualisation)
+![](https://github.com/StefanGao1114/PilcoTracking/blob/master/src/figs/Visualisation.gif)
 
 
