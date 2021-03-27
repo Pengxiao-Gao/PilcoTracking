@@ -19,4 +19,6 @@ Feed-forward control and PILCO Feed-back control
 
 ![](https://github.com/StefanGao1114/PilcoTracking/blob/master/src/figs/Visualisation.gif)
 
+## Analysis
 
+![](https://github.com/StefanGao1114/PilcoTracking/blob/master/src/figs/Visualisation.gif)
